@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Press+Start+2P&display=swap');
+
+body {
+    max-width: 1260px;
+    max-height: 100vh;
+
+    background-color: black;
+}
+
+.game-board {
+    position: relative;
+    overflow: hidden;
+
+    width: 100vw;
+    height: 60vh;
+
+    border-bottom: 15px solid rgb(1, 209, 1);
+    margin: 0 auto;
+
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.game {
+    width: 100vw;
+    height: auto;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: 10%;
+
+    /* overflow: hidden; */
+    transform: scale(1);
+    transition: transform .5s ease, height .2s ease;  
+}
+
+.game-over {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 10%;
+
+    /* overflow: hidden; */
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;    
+}
+
+.game-over.active {
+    transform: scale(1);
+}
+
+.text {
+    position: absolute;
+
+    width: 100%;
+    height: 80px;
+
+    border: 2px solid #fff;
+    backdrop-filter: 20px;
+    border-radius: 20px;
+
+    background: transparent;
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+}
+
+
+h1 {
+    position: relative;
+
+    height: auto;
+    padding: 10px;
+
+    background-color: red;
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    position: relative;
+    width: 100%;
+
+    background-color: yellow;
+
+    text-align: center; 
+}
+
+.reload {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: auto;
+    margin-top: 8%;
+}
+
+.pipe {
+    position: absolute;
+
+    bottom: 0;
+    width: 80px;
+    height: 80px;
+
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+    position: absolute;
+
+    width: 150px;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+
+    margin-top: 30px;
+    width: 550px;
+    animation: clouds-animation 25s infinite linear;
+}
+
+.cloud {
+    position: absolute;
+
+    margin-top: 190px;
+    width: 650px;
+    animation: cloud-animation 22s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -700px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
